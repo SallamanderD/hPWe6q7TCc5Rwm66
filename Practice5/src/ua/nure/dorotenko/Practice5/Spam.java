@@ -1,4 +1,4 @@
-package Practice5;
+package ua.nure.dorotenko.Practice5;
 
 import java.io.IOException;
 
