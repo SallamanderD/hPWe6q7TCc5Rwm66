@@ -1,4 +1,4 @@
-package ua.nure.dorotenko.Practice5;
+package Practice5;
 
 public class Part5 {
 

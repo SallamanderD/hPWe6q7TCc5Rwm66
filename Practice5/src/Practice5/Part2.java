@@ -1,7 +1,6 @@
-package ua.nure.dorotenko.Practice5;
+package Practice5;
 
 import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 public class Part2 {
 	public static void main(String[] args) throws InterruptedException {

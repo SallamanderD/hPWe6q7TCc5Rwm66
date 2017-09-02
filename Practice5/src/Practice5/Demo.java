@@ -1,8 +1,5 @@
-package ua.nure.dorotenko.Practice5;
+package Practice5;
 
-
-import java.io.File;
-import java.io.RandomAccessFile;
 
 public class Demo {
 	
