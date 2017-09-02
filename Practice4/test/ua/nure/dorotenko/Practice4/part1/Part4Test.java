@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import ua.nure.dorotenko.Practice4.Part4;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -46,9 +47,13 @@ public class Part4Test {
         iterator.remove();
     }
 
-    @Test(expected = IOException.class)
+    @Test(expected = FileNotFoundException.class)
     public void testNoFile() throws IOException{
         Files.delete(Paths.get("part4.txt"));
         Part4 part4 = new Part4();
+        Iterator<String> iterator = part4.iterator();
+        while (iterator.hasNext()) {
+            iterator.next();
+        }
     }
 }

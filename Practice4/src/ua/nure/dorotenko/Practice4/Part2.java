@@ -1,6 +1,7 @@
 package ua.nure.dorotenko.Practice4;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class Part2 {
             numbers.append(ThreadLocalRandom.current().nextInt(0, 51) + " ");
         }
         try {
-            Files.write(Paths.get("part2.txt"), numbers.toString().getBytes());
+            Files.write(Paths.get("part2.txt"), numbers.toString().getBytes("cp1251"));
         } catch (IOException ex) {
             System.out.println(ex);
         }
@@ -31,7 +32,7 @@ public class Part2 {
 
     public static void sort() throws IOException {
         List<String> input;
-        input = Files.readAllLines(Paths.get("part2.txt"));
+        input = Files.readAllLines(Paths.get("part2.txt"), Charset.defaultCharset());
         List<Integer> intList = new ArrayList<>();
         for (String s : input) {
             for (String x : s.split("\\s+")) {
@@ -44,7 +45,7 @@ public class Part2 {
             result.append(number + " ");
         }
         try {
-            Files.write(Paths.get("part2_sorted.txt"), result.toString().getBytes());
+            Files.write(Paths.get("part2_sorted.txt"), result.toString().getBytes("cp1251"));
         } catch (IOException ex) {
             System.out.println(ex);
         }
@@ -56,8 +57,8 @@ public class Part2 {
         List<String> str;
         List<String> str2;
         try {
-            str = Files.readAllLines(Paths.get("part2.txt"));
-            str2 = Files.readAllLines(Paths.get("part2_sorted.txt"));
+            str = Files.readAllLines(Paths.get("part2.txt"), Charset.defaultCharset());
+            str2 = Files.readAllLines(Paths.get("part2_sorted.txt"), Charset.defaultCharset());
         } catch (IOException ex) {
             System.out.println(ex);
             return;

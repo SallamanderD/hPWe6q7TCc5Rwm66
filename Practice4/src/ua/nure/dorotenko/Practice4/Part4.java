@@ -1,6 +1,7 @@
 package ua.nure.dorotenko.Practice4;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -11,16 +12,16 @@ import java.util.regex.Pattern;
 
 public class Part4 implements Iterable<String> {
     private static final String REGEXP = "(?U)[A-ZА-Я0-9].+?\\.";
-    List<String> input = new ArrayList<>();
+    private List<String> input = new ArrayList<>();
 
     public Part4() throws IOException {
-        input = Files.readAllLines(Paths.get("part4.txt"));
-        Matcher m = Pattern.compile(REGEXP).matcher(input.get(0));
+        String file = new String(Files.readAllBytes(Paths.get("part4.txt")), Charset.forName("cp1251"));
+        Matcher m = Pattern.compile(REGEXP).matcher(file.replaceAll(System.lineSeparator(), ""));
         List<String> allMatches = new ArrayList<>();
         while (m.find()) {
             allMatches.add(m.group());
         }
-        input = allMatches;
+        this.input = allMatches;
     }
 
     public static void main(String[] args) {
@@ -39,11 +40,8 @@ public class Part4 implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
-
         return new Iterator<String>() {
-
-            int cursor = -1;
-
+            private int cursor = -1;
             @Override
             public boolean hasNext() {
                 if (input.size() > cursor + 1) {
@@ -51,12 +49,10 @@ public class Part4 implements Iterable<String> {
                 }
                 return false;
             }
-
             @Override
             public String next() {
                 return input.get(++cursor);
             }
-
             @Override
             public void remove() {
                 throw new UnsupportedOperationException();

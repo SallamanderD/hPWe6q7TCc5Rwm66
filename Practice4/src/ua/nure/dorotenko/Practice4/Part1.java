@@ -1,9 +1,9 @@
 package ua.nure.dorotenko.Practice4;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +23,7 @@ public class Part1 {
     public static String toUpper(String fileName) throws IOException {
         List<String> input;
         StringBuilder result = new StringBuilder();
-        input = Files.readAllLines(Paths.get(fileName));
+        input = Files.readAllLines(Paths.get(fileName), Charset.forName("cp1251"));
         Pattern p = Pattern.compile(REGEXP, Pattern.UNICODE_CHARACTER_CLASS);
         Matcher m;
         for (String s : input) {

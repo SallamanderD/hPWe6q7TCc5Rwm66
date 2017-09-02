@@ -3,7 +3,7 @@ package ua.nure.dorotenko.Practice4;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Iterator;
+
 
 public class Demo {
     private static final InputStream STD_IN = System.in;
