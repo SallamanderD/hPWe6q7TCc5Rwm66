@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="InternetBankingDB@localhost" uuid="0a9a424e-5fef-4ed3-82a3-707548c8c07b">
+      <database-info product="PostgreSQL" version="9.6.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-schemas>InternetBankingDB:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+        <welcome-file>/jsp/login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/jsp/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/jsp/error.jsp</location>
+    </error-page>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>ua.nure.dorotenko.web.filters.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/jsp/*</url-pattern>
+        <servlet-name>Controller</servlet-name>
+    </filter-mapping>
+    <filter>
+        <filter-name>CommandAccessFilter</filter-name>
+        <filter-class>ua.nure.dorotenko.web.filters.RoleFilter</filter-class>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value></param-value>
+        </init-param>
+        <init-param>
+            <param-name>administrator</param-name>
+            <param-value>blockAccount adminPanel makeAdmin changeBanned</param-value>
+        </init-param>
+        <init-param>
+            <param-name>common</param-name>
+            <param-value>setLang sendUnblock homepage logout unknown createAcc block cards replenish changePIN createCard replenishPage deleteCard deleteCardPage createCardPage paymentPage makePayment paymentHistory preparedPayments</param-value>
+        </init-param>
+        <init-param>
+            <param-name>unauthorized</param-name>
+            <param-value>login register activate unknown</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>JSPAccesFilter</filter-name>
+        <filter-class>ua.nure.dorotenko.web.filters.JSPFilter</filter-class>
+        <init-param>
+            <param-name>forbiddenForLogged</param-name>
+            <param-value>/jsp/login.jsp /jsp/register.jsp</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forbidden</param-name>
+            <param-value>/jsp/replenish.jsp /jsp/profile.jsp /jsp/acceptDeleting.jsp /jsp/cards.jsp /jsp/preparePayments.jsp /jsp/createCard.jsp /jsp/homepage.jsp /jsp/payment.jsp /jsp/paymentHistory.jsp</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>JSPAccesFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>ua.nure.dorotenko.web.Controller</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
+    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>CommandAccessFilter</filter-name>
+        <servlet-name>Controller</servlet-name>
+    </filter-mapping>
+
+</web-app>

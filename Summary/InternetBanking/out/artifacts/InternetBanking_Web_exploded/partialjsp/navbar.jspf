@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <c:if test="${not empty sessionScope.user}">
+        <a href="/controller?command=homepage" class="navbar-brand">Internet Banking</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar4">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar4">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=paymentHistory"><fmt:message key="navbar.paymenthistory"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=cards"><fmt:message key="navbar.cards"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=paymentPage"><fmt:message key="navbar.makepayment"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=preparedPayments"><fmt:message key="navbar.makepreppayment"/></a>
+                </li>
+                <c:if test="${userRole == 'administrator'}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/controller?command=adminPanel"><fmt:message key="navbar.adminPanel"/></a>
+                    </li>
+                </c:if>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/jsp/profile.jsp">${sessionScope.user.login}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=logout"><fmt:message key="navbar.logout"/></a>
+                </li>
+            </ul>
+        </div>
+    </c:if>
+    <c:if test="${empty sessionScope.user}">
+        <span class="navbar-brand">Internet Banking</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar4">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </c:if>
+</nav>
+<p style="margin-left: 2%" class="text-muted"><fmt:message key="label.exchangerates"/> <ex:currency/></p>

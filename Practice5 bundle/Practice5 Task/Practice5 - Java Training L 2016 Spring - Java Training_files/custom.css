@@ -1,0 +1,18 @@
+
+/* Custom styles for Confluence (included for all themes by default) */
+
+#labels-section {display: none;}
+
+.page-metadata {display: none;}
+
+.update-item-changes {display: none;}
+
+#download-all-link {display: none;}
+
+#view-user-history-link {display: none;}
+
+.abcd tr:hover {background-color: Red;}
+
+/* End custom styles for Confluence */
+
+

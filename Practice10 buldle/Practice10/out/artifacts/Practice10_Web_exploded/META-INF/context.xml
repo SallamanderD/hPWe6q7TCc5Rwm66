@@ -1,0 +1,8 @@
+<Context>
+    <Resource name="jdbc/Practice10db" auth="Container" type="javax.sql.DataSource"
+              username="postgres"
+              password="root"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost/Practice10db"
+              maxTotal="10"/>
+</Context>

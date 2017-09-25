@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<st3:knifes
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:st3="http://nure.ua/dorotenko/practice6"
+        xsi:schemaLocation="http://nure.ua/dorotenko/practice6 Knifes.xsd">
+    <knife>
+        <type>Вилка</type>
+        <handy>Одноручное</handy>
+        <origin>Дамасск</origin>
+        <visuals>
+            <length>14</length>
+            <width>13</width>
+            <material>Медь</material>
+            <handle>
+                <firstname>asdasd</firstname>firstname>
+                <lastname>asdasdasdasd</lastname>lastname>
+            </handle>
+            <value>Коллекционный</value>
+        </visuals>
+    </knife>
+</st3:knifes>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nure.ua/dorotenko/practice6"
+            xmlns:tns="http://nure.ua/dorotenko/practice6">
+    <xsd:element name="knifes" type="tns:Knifes"/>
+    <xsd:complexType name="Knifes">
+        <xsd:sequence>
+            <xsd:element name="knife" type="tns:Knife" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Knife">
+        <xsd:sequence>
+            <xsd:element name="type" type="tns:Type"/>
+            <xsd:element name="handy" type="tns:Handy"/>
+            <xsd:element name="origin" type="xsd:string"/>
+            <xsd:element name="visuals" type="tns:Visuals"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Type">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Нож"/>
+            <xsd:enumeration value="Сабля"/>
+            <xsd:enumeration value="Топор"/>
+            <xsd:enumeration value="Дубина"/>
+            <xsd:enumeration value="Вилка"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Handy">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Одноручное"/>
+            <xsd:enumeration value="Двуручное"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="Visuals">
+        <xsd:sequence>
+            <xsd:element name="length" type="tns:Length"/>
+            <xsd:element name="width" type="tns:Width"/>
+            <xsd:element name="material" type="tns:Material"/>
+            <xsd:element name="handle" type="tns:WoodenHandle"/>
+            <xsd:element name="value" type="Collactable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Length">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Width">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Collactable">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Коллекционный"/>
+            <xsd:enumeration value="Не коллекционный"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Material">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Сталь"/>
+            <xsd:enumeration value="Чугун"/>
+            <xsd:enumeration value="Медь"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="Handle">
+        <xsd:sequence>
+            <xsd:element name="material" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="WoodenHandle">
+        <xsd:complexContent>
+            <xsd:extension base="tns:Handle">
+                <xsd:sequence>
+                    <xsd:element name="material" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,13 @@
+<head>
+    <title>
+        ${title}
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/mystyles.css"/>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/myscript.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>

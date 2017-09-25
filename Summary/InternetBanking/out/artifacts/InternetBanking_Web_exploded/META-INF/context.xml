@@ -1,0 +1,8 @@
+<Context>
+    <Resource name="jdbc/InternetBankingDB" auth="Container" type="javax.sql.DataSource"
+              username="postgres"
+              password="root"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost/InternetBankingDB"
+              maxTotal="10"/>
+</Context>

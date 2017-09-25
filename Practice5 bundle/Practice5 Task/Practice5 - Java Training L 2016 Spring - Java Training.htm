@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html class="splitter-invoked"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Practice5 - Java Training L 2016 Spring - Java Training</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="/conf2">
+<meta id="confluence-base-url" name="confluence-base-url" content="http://jtrain.ddns.net:9001/conf2">
+
+<meta id="atlassian-token" name="atlassian-token" content="c03ea78087dab3fbc7ec6f5251cd87bf37f07f2d">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="JTL">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '/conf2';
+</script>
+
+<!-- include system css resources -->
+
+    <link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_003.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/391/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/391/_/download/superbatch/css/batch.css?conditionalComment=IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/391/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_002.css" media="print">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/10aa75430b48f197ccea5422bf34efc8/_/download/contextbatch/css/viewcontent,main/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_004.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com_003.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/confluence.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/confluence_002.css" media="print">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com_002.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/default-theme.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/splitter.css" media="all">
+<link type="text/css" rel="stylesheet" href="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/custom.css" media="all">
+
+<!-- end system css resources -->
+
+    <meta name="confluence-request-time" content="1465045673517">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+        
+            <script type="text/x-template" title="share-content-popup">
+    <form action="#" method="post" class="aui share-content-popup">
+        <fieldset>
+            <label for="users">User name or email</label>
+            <div class="autocomplete-user-target">
+                <input class="text autocomplete-sharepage" id="users" data-max="10" data-dropdown-target=".autocomplete-user-target" data-none-message="No matching user or email found"/>
+            </div>
+            <ol class="recipients">
+            </ol>
+            <div><label for="note">Note</label></div>
+            <textarea class="textarea" id="note" placeholder="Add an optional note"/>
+        </fieldset>
+        <div class="button-panel">
+            <div class="progress-messages-icon"></div>
+            <div class="progress-messages">
+            </div>
+            <input class="button submit" type="submit" value="Share" disabled/>
+            <a class="close-dialog" href="#">Cancel</a>
+        </div>
+    </form>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-username">
+    <li data-username="{username}" style="display: none">
+        <span>
+            <img src="{thumbnailLink.href}" title="{title}">
+            <span>{title}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-email">
+    <li data-email="{email}" style="display: none">
+        <span>
+            <img src="{icon}" title="{email}">
+            <span>{email}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+            <meta name="ajs-keyboardshortcut-hash" content="c9a63bf5a5addd1a233f9322892a1f10">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-page-id" content="72253606">
+            <meta name="ajs-page-title" content="Practice5">
+            <meta name="ajs-parent-page-title" content="Module 08">
+            <meta name="ajs-parent-page-id" content="72253604">
+            <meta name="ajs-space-key" content="JTL">
+            <meta name="ajs-space-name" content="Java Training L 2016 Spring">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-context-path" content="/conf2">
+            <meta name="ajs-base-url" content="http://jtrain.ddns.net:9001/conf2">
+            <meta name="ajs-version-number" content="4.3.1">
+            <meta name="ajs-build-number" content="3390">
+            <meta name="ajs-remote-user" content="engsyst">
+            <meta name="ajs-static-resource-url-prefix" content="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="c03ea78087dab3fbc7ec6f5251cd87bf37f07f2d">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-editor.loader.resources" content="&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/44f46fb1fbbac1140164e3e1b503281e/_/download/contextbatch/js/editor,macro-browser,-viewcontent/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="http://jtrain.ddns.net:9001/conf2/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="http://jtrain.ddns.net:9001/conf2/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://jtrain.ddns.net:9001/conf2/opensearch/osd.action" title="Java Training">
+
+        <!-- include system javascript resources -->
+                        
+    
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/391/_/download/superbatch/js/batch.js?conditionalComment=lt+IE+9" ></script>
+<![endif]-->
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_002.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/391/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_004.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_005.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/batch_003.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com_002.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com_003.js"></script>
+<script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/com.js"></script>
+
+    
+    <!-- end system javascript resources -->
+    
+
+    
+    <link rel="canonical" href="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5">
+    <link rel="shortlink" href="http://jtrain.ddns.net:9001/conf2/x/poBOB">
+    <meta name="wikilink" content="[JTL:Practice5]">
+    <meta name="page-version" content="1">
+
+<!-- base href="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5" --></head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-documentation  splitter-invoked">
+
+        
+    <div id="full-height-container">
+    <div id="header-precursor">
+        
+                </div>
+
+<div id="header" class="sectionbottom ">
+        <form id="quick-search" class="quick-search" method="get" action="/conf2/dosearchsite.action">
+                <fieldset>
+            <input name="spaceSearch" value="false" type="hidden">
+        </fieldset>
+        <fieldset>
+            <legend>Quick Search</legend>
+            <input value="Search Confluence" title=" ( Type '/' )" class="quick-search-query placeholded" id="quick-search-query" accesskey="search-pages-action.accesskey" autocomplete="off" name="queryString" size="25" type="text">
+            <input class="quick-search-submit" id="quick-search-submit" value="Search Confluence" type="submit">
+            <div class="aui-dd-parent quick-nav-drop-down"><!-- Quick nav appears here --></div>
+        </fieldset>
+        <fieldset class="hidden parameters">
+            <input id="quickNavEnabled" value="true" type="hidden">
+                    </fieldset>
+    </form>
+
+    <ul id="header-menu-bar" class="ajs-menu-bar">
+                    
+            
+                
+                                                                
+            <li class="normal ajs-menu-item">
+        <a id="user-menu-link" class="user trigger ajs-menu-title" href="#"><span><span>Yury Mischerjakov</span></span></a>         <div style="" class="ajs-drop-down assistive" hidden="">
+                        <ul id="user-menu-link-user-preferences" class="section-user-preferences first">
+                                        <li>
+        
+        
+    
+    <a id="view-user-history-link" href="http://jtrain.ddns.net:9001/conf2/users/viewuserhistory.action" class="user-item user-history popup-link" title="">
+                   <span>Recently Viewed</span></a>        </li>
+                            </ul>
+                        <ul id="user-menu-link-user-operations" class="section-user-operations">
+                                        <li>
+    
+        
+    
+    <a id="logout-link" href="http://jtrain.ddns.net:9001/conf2/logout.action" class="user-item logout-link" title="">
+                   <span>Log Out</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                        <li class="normal ajs-menu-item">
+            <div id="splitter-button" class="" title="Show or hide sidebar ( Type '[' )"></div>
+        </li>
+
+    </ul>
+    
+    
+    <ol id="breadcrumbs">
+                    
+                        
+        <li class="first">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/dashboard.action" title="Go to Dashboard ( Type 'g' then 'd' )">Dashboard</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTL">Java Training L 2016 Spring</a></span>
+                </li>
+                                        <li id="ellipsis" title="Show all breadcrumbs"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Java+Training+L+2016+Spring+Home">Java Training L 2016 Spring Home</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Classes">Classes</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+08">Module 08</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5">Practice5</a></span>
+                </li>
+        </ol>
+
+</div>
+
+    <div style="position: relative; height: 719.333px;" id="splitter">
+    <div style="position: absolute; left: 0px; width: 300px; height: 719px;" id="splitter-sidebar">
+        
+
+                    
+        
+    
+
+<div class="plugin_pagetree">
+
+                <div id="pagetreesearch">
+            <form method="POST" action="/conf2/plugins/pagetreesearch/pagetreesearch.action" name="pagetreesearchform">
+                                    <input name="ancestorId" value="72253579" type="hidden">
+                                <input name="spaceKey" value="JTL" type="hidden">
+                <input size="20" name="queryString" type="text">
+                <input value="Search" type="submit">
+            </form>
+        </div>
+    
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div id="children72253579-0" class="plugin_pagetree_children">
+<ul class="plugin_pagetree_children_list" id="child_ul72253579-0">
+            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253580-0" class="plugin_pagetree_childtoggle icon icon-minus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253580-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Classes">Classes</a>
+        </span>            </div>
+
+        <div id="children72253580-0" class="plugin_pagetree_children_container">
+                                                        <ul class="plugin_pagetree_children_list" id="child_ul72253580-0">
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253581-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253581-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+01">Module 01</a>
+        </span>            </div>
+
+        <div id="children72253581-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253584-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253584-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+02">Module 02</a>
+        </span>            </div>
+
+        <div id="children72253584-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253589-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253589-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+03">Module 03</a>
+        </span>            </div>
+
+        <div id="children72253589-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253591-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+04">Module 04</a>
+        </span>            </div>
+
+        <div id="children72253591-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253592-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253592-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+05">Module 05</a>
+        </span>            </div>
+
+        <div id="children72253592-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253596-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+06">Module 06</a>
+        </span>            </div>
+
+        <div id="children72253596-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253597-0" class="plugin_pagetree_childtoggle icon icon-plus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253597-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+07">Module 07</a>
+        </span>            </div>
+
+        <div id="children72253597-0" class="plugin_pagetree_children_container">
+                                                            </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                                             <a id="plusminus72253604-0" class="plugin_pagetree_childtoggle icon icon-minus" href="#">
+            </a>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253604-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+08">Module 08</a>
+        </span>            </div>
+
+        <div id="children72253604-0" class="plugin_pagetree_children_container">
+                                                        <ul class="plugin_pagetree_children_list" id="child_ul72253604-0">
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span style="font-weight: bold;" class="plugin_pagetree_children_span" id="childrenspan72253606-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5">Practice5</a>
+        </span>            </div>
+
+        <div id="children72253606-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                        </ul>
+                                        </div>
+    </li>
+                                            <li>
+    <div class="plugin_pagetree_childtoggle_container">
+                    <span class="no-children icon icon-square"></span>
+            </div>
+    <div class="plugin_pagetree_children_content">
+                    <span class="plugin_pagetree_children_span" id="childrenspan72253608-0">                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Module+09">Module 09</a>
+        </span>            </div>
+
+        <div id="children72253608-0" class="plugin_pagetree_children_container">
+            </div>
+    </li>
+                                        </ul>
+                                        </div>
+    </li>
+    </ul>
+</div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input name="treeId" value="" type="hidden">
+        <input name="treeRequestId" value="/conf2/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false" type="hidden">
+        <input name="treePageId" value="72253606" type="hidden">
+
+        <input name="noRoot" value="false" type="hidden">
+        <input name="rootPageId" value="72253579" type="hidden">
+
+        <input name="rootPage" value="" type="hidden">
+        <input name="startDepth" value="0" type="hidden">
+        <input name="spaceKey" value="JTL" type="hidden">
+
+        <input name="i18n-pagetree.loading" value="Loading..." type="hidden">
+        <input name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page." type="hidden">
+        <input name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information." type="hidden">
+        <input name="loginUrl" value="/conf2/login.action?os_destination=%2Fdisplay%2FJTL%2FPractice5" type="hidden">
+
+                <fieldset class="hidden">
+                                                <input name="ancestorId" value="72253604" type="hidden">
+                                    <input name="ancestorId" value="72253580" type="hidden">
+                                    <input name="ancestorId" value="72253579" type="hidden">
+                                    </fieldset>
+    </fieldset>
+</div>
+
+
+
+            </div><div unselectable="on" class="vsplitbar" style="z-index: 4; position: absolute; -moz-user-select: none; cursor: ew-resize; left: 300px; height: 719px;"><a title="vsplitbar" tabindex="0" accesskey="L" href="javascript:void(0)"></a></div>
+    <div style="position: absolute; left: 305px; width: 1135px; height: 719px;" id="splitter-content">
+
+                    <script type="text/javascript" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/doc-theme.js"></script>
+    
+                        
+            
+<div id="main">
+    <div id="main-header">
+        
+        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                <li class="ajs-button normal">
+    
+        
+    
+    <a id="shareContentLink" href="http://jtrain.ddns.net:9001/conf2" class="share" title="Share this content by emailing other users ( Type 's' )">
+                   <span><u>S</u>hare</span></a>        </li>
+                    
+                        
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="#"><span><span>Tools</span></span></a>         <div class="ajs-drop-down most-right-menu-item assistive" hidden="">
+                        <ul id="action-menu-link-marker" class="section-marker first">
+                                        <li>
+    
+        
+    
+    <a id="page-favourite" href="http://jtrain.ddns.net:9001/conf2/labels/addfavourite.action?entityId=72253606&amp;atl_token=c03ea78087dab3fbc7ec6f5251cd87bf37f07f2d" class="action-page-favourite" title="">
+                   <span>Favourite</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="page-watch" href="http://jtrain.ddns.net:9001/conf2/pages/addpagenotification.action?pageId=72253606&amp;atl_token=c03ea78087dab3fbc7ec6f5251cd87bf37f07f2d" class="action-page-watching" title="">
+                   <span>Watch</span></a>        </li>
+                                        <li class="assistive">
+    
+        
+    
+    <a id="page-unwatch" href="http://jtrain.ddns.net:9001/conf2/pages/removepagenotification.action?pageId=72253606&amp;atl_token=c03ea78087dab3fbc7ec6f5251cd87bf37f07f2d" class="action-page-watching selected ie-page-watching-selected inactive" title="">
+                   <span>Stop Watching</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+        
+        <h1 id="title-heading" class="pagetitle">
+                            <a href="http://jtrain.ddns.net:9001/conf2/display/JTL"><img class="logo global" src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/confluence_48_trans.png" alt=""></a>                
+            <span id="title-text">
+                                        <a href="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5">Practice5</a>
+                            </span>
+        </h1>
+    </div>
+
+    
+
+    
+    
+    
+    
+    
+
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                      
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+    
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <fieldset>
+                
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+            <div class="row">
+                <label for="new-space">New space:</label>
+                <div class="value new-space-value">
+                    <input id="new-space-key" name="new-space-key" type="hidden" value="JTL">
+                                            <span class="space-input">
+                            <input id="new-space" name="new-space" value="Java Training L 2016 Spring" disabled="disabled">
+                        </span>
+                        <span class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</span>
+                                        <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="new-parent-page">New parent page:</label>
+                <div class="value new-parent-page-value">
+                    <span class="page-input">
+                        <input id="new-parent-page" name="new-parent-page" value="Module 08">
+                    </span>
+                    <span class="description">Start typing a page title to see a list of suggestions.</span>
+                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-form">
+            <fieldset>
+                    
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+                    
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+                <input class="search-query" id="move-page-search-query">
+                    
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+                                    <select id="move-page-search-space" class="search-space" disabled="disabled">
+                        <option value="JTL" selected="selected">Java Training L 2016 Spring</option>
+                    </select>
+                                <input type="button" value="Search">
+                                    <div class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</div>
+                            </fieldset>
+        </div>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/conf2/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script><!-- Start restrictions section -->
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+
+                <div id="page-permissions-error-div" class="hidden">
+            <a href="#" id="permissions-error-div-close">Ok</a>
+            <div></div>
+        </div>
+
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div>
+                <input id="restrictViewRadio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                    <span id="page-permissions-choose-me" class="ajs-button normal">
+                        <img class="permission-entity-picture" src="/conf2/images/icons/profilepics/default.gif" border="0" alt="Me" align="absmiddle"/>
+                        <a href="#">Me</a>
+                        <span class="remote-user-name hidden">engsyst</span>
+                    </span>
+                                <span id="page-permissions-choose-user" class="ajs-button">
+                    
+
+
+
+    
+
+
+
+<a href="#" id='userpicker-popup-link-image' onClick="var picker = window.open('/conf2/spaces/openuserpicker.action?key=JTL&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;"><img src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/user_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose users" /></a>
+<a href="#" id='userpicker-popup-link-text' onClick="var picker = window.open('/conf2/spaces/openuserpicker.action?key=JTL&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">Person...</a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="ajs-button">
+                    
+
+
+
+    
+
+ 
+
+<a href="#" id='grouppicker-popup-link-image' onClick="var picker = window.open('/conf2/spaces/opengrouppicker.action?key=JTL&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;"><img src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/group_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" /></a>
+<a href="#" id='grouppicker-popup-link-text' onClick="var picker = window.open('/conf2/spaces/opengrouppicker.action?key=JTL&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">Group...</a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                <input type="text" id="page-permissions-names-input" name="permissionNames"
+                    placeholder="Enter user or group name" class="autocomplete-user"
+                    data-max="10" data-none-message="No matches"
+                    data-target="#page-permissions-names-hidden" data-template="{username}"
+                    data-dropdown-target="#page-perms-name-dropdown-wrapper" data-resize-to-input="true"
+                    size="30"/>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <img height="16px" width="1px" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/border/spacer.gif"/>
+                <input type="button" id="add-typed-names" value="Restrict">
+                <div id="page-perms-name-dropdown-wrapper" class="aui-dd-parent autocomplete"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No view restrictions are defined for this page</span></td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No edit restrictions are defined for this page</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- End restrictions section -->
+
+        
+    
+    
+        <fieldset class="hidden parameters">
+            <input title="parentPageId" value="72253604" type="hidden">
+        </fieldset>
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+    
+            
+    
+    <a id="content-metadata-page-restrictions" href="#" class="page-metadata-icon page-restrictions" title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                   <span>Page restrictions apply</span></a>        </li>
+                            <li class="page-metadata-item noprint">
+    
+        
+    
+    <a id="content-metadata-attachments" href="http://jtrain.ddns.net:9001/conf2/pages/viewpageattachments.action?pageId=72253606&amp;metadataLink=true" class="page-metadata-icon action-view-attachments" accesskey="a" title="Attachments: 1">
+                   <span><span class="page-metadata-attachments-text">Attachments:</span><span class="page-metadata-attachments-count">1</span></span></a>        </li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a data-user-hover-bound="true" title="" href="http://jtrain.ddns.net:9001/conf2/display/%7Edkolesnikov" class="url fn confluence-userlink userlink-0" data-username="dkolesnikov">Dmitry Kolesnikov</a>, last edited by <a data-user-hover-bound="true" title="" href="http://jtrain.ddns.net:9001/conf2/display/%7Edkolesnikov" class="url fn confluence-userlink userlink-0" data-username="dkolesnikov">Dmitry Kolesnikov</a> on Apr 23, 2016
+                                                                    </li>
+                    </ul>
+                </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+        <fieldset class="hidden parameters">
+                        <input title="browsePageTreeMode" value="view" type="hidden">
+        </fieldset>
+
+        <div class="wiki-content">
+                           <p>&nbsp;На странице представлена информация по практическому заданию №5</p><hr><p><style type="text/css">/*<![CDATA[*/
+div.rbtoc1465045673553 {margin-left: 1.5em;padding: 0px;}
+div.rbtoc1465045673553 ul {list-style: circle;margin-left: 0px;padding-left: 15px;}
+div.rbtoc1465045673553 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style></p><div class="rbtoc1465045673553">
+<ul>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B3%D0%BB%D1%83%D1%88%D0%BA%D0%B0%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0">Заглушка проекта</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B51">Задание 1</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B52">Задание 2</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53">Задание 3</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B54">Задание 4</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B55">Задание 5</a></li>
+    <li><a href="#Practice5-%D0%97%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B56"><span>Задание 6</span></a></li>
+    <li><a href="#Practice5-%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B"><span>Примеры</span></a></li>
+</ul></div><p></p><div class="panelMacro"><table class="warningMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/forbidden.png" alt="" align="absmiddle" border="0" height="16" width="16"></td><td><p>В Jenkins время сборки проекта ограничено тремя минутами. По истечение этого времени задача будет снята с выполнения.</p><div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Console Output</b></div><div class="codeContent panelContent">
+<div><div id="highlighter_687011" class="syntaxhighlighter nogutter  java"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container" title="Hint: double-click to select code"><div class="line number1 index0 alt2"><code class="java plain">Build timed out (after </code><code class="java value">3</code> <code class="java plain">minutes). Marking the build as aborted.</code></div><div class="line number2 index1 alt1"><code class="java plain">Build was aborted</code></div><div class="line number3 index2 alt2"><code class="java plain">Finished: ABORTED</code></div></div></td></tr></tbody></table></div></div>
+</div></div></td></tr></tbody></table></div><div class="panelMacro"><table class="warningMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/forbidden.png" alt="" align="absmiddle" border="0" height="16" width="16"></td><td><p>Тесты писать не нужно. Покрытие Sonar подсчитывать не будет.</p></td></tr></tbody></table></div><h4 id="Practice5-Заглушкапроекта">Заглушка проекта</h4><p>Можно скачать здесь:&nbsp;<a href="http://jtrain.ddns.net:9001/conf2/download/attachments/72253606/Practice5Stub.zip?version=1&amp;modificationDate=1461436726000">тынц</a></p><h4 id="Practice5-Задание1">Задание 1</h4><p>Создать
+ дочерний поток, который бы в течение примерно 5 сек печатал свое имя 
+каждые полсекунды. Сделать это двумя способами - при помощи расширения 
+класса Thread и при помощи реализации интерфейса Runnable.</p><h4 id="Practice5-Задание2">Задание 2</h4><p>Создать класс&nbsp;<strong>Spam</strong>,
+ который получает массив интервалов времени в миллисекундах и 
+согласованный с ним массив сообщений, и выводит соответствующие 
+сообщения на экран через заданные интервалы времени.&nbsp;По нажатию на 
+клавишу Enter приложение должно завершать свою работу&nbsp;(данную 
+функциональность поместить в метод&nbsp;<strong>Spam.main</strong>). При демонстрации работы смоделировать ввод Enter через 5 сек&nbsp;(данную функциональность поместить в метод&nbsp;<strong>Part2.main</strong>).</p><h4 id="Practice5-Задание3">Задание 3</h4><p>Создать
+ класс с двумя отдельными счетчиками и объект этого класса. Создать 
+несколько одинаковых потоков, каждый из которых повторяет следующее: 
+сравнивает значение счетчиков и печатает результат сравнения, 
+увеличивает первый счетчик, засыпает на 10 мсек, а затем увеличивает 
+второй счетчик. Сравнить работу программы при условии, что упомянутый 
+блок кода синхронизирован и не синхронизирован.</p><h4 id="Practice5-Задание4">Задание 4</h4><p>Распараллелить
+ задачу поиска максимального значения в матрице MxN при помощи M 
+потоков.&nbsp;Каждую операцию сравнения снабдить задержкой в 1 
+мс.&nbsp;Создать и заполнить матрицу 4x100 случайными числами. 
+Дополнительно решить задачу поиска максимального значения без 
+распараллеливания. Вывести результат и время выполнения кода для обоих 
+вариантов.</p><h4 id="Practice5-Задание5">Задание 5</h4><p>Писатель пишет в буфер, после этого буфер&nbsp;<strong>последовательно</strong>&nbsp;считывают читатели (вначале один, потом другой и т.д.). После того, как все читатели прочитают буфер, процесс повторяется.</p><ol><li><s>В качестве буфера можно использовать StringBuilder. Записывать символы с некоторой задержкой (писатель - отдельный поток).</s></li><li>Каждый читатель - отдельный поток (ограничить задачу тремя потоками).</li><li><s>Процессы
+ записи и чтения должны быть визуализированны, т.е. чтобы видно было как
+ писатель пишет, а читатели считывают. Можно дублировать записываемые и 
+считываемые символы на экран, при этом для писателя можно использовать 
+System.err - что приведет к выводу символов красным цветом (актуально 
+для Eclipse IDE).</s></li><li>Ограничить число тактов записи/чтения_всеми_читателями тремя тактами.</li><li>Полное выполнение демонстрирующей программы - не более 5 с.</li><li>п 1. и п.3 неактуальны - использовать пример-заглушку (<span>класс&nbsp;</span>Part51), в ней писатель и читатели уже написаны, необходимо привнести синхронизацию.</li></ol><p>Данное задание решить тремя&nbsp;способами (время выполнения задания 5 - не более 15 с):</p><ol><li>Синхронизацию записи/чтения реализовать с помощью классической блокирующей синхронизации (<strong>synchronized</strong>).
+ Замечание: из исходного кода заглушки ничего не удалять, код только 
+добавлять или переставлять местами строки кода. Возможно потребуется 
+несколько мониторов. Не добавлять код, который содержит вызов 
+метода&nbsp;<strong>Thread#join</strong>. Программа должна быть устойчивой к изменению констант - <strong>количество тактов чтения/записи</strong>; <strong>размер буфера</strong>; <strong>задержка при записи/чтении</strong>,
+ т.е. после изменения данных параметров приложение должно работать 
+правильно. Для проверки можно написать класс, в котором многократно 
+вызывать Part51.main (например, 50 раз; в конечный код данную 
+функциональность не включать!).</li><li>Синхронизацию записи/чтения реализовать с помощью объекта&nbsp;<strong>ReentranLock</strong>.&nbsp;Для синхронизации читателей использовать объект&nbsp;<strong>Condition</strong>, который связан с объектом&nbsp;<strong>ReentranLock</strong>.</li><li>То же, что и способ 2, но&nbsp;<em>не использовать</em>&nbsp;<strong>Condition</strong>.</li></ol><div><p>&nbsp;</p><div class="panelMacro"><table class="noteMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="Practice5%20-%20Java%20Training%20L%202016%20Spring%20-%20Java%20Training_files/warning.png" alt="" align="absmiddle" border="0" height="16" width="16"></td><td><p>п. 2 и п. 3 для решения дома. Вначале изучить классы <strong>ReentrantLock</strong> и <strong>Condition</strong>, затем решить.</p></td></tr></tbody></table></div><div id="expander-672136152" class="expand-container">
+<div id="expander-control-672136152" class="expand-control">
+    <span class="expand-control-icon">&nbsp;</span><span class="expand-control-text">Пример вывода</span>
+</div>
+<div id="expander-content-672136152" class="expand-content expand-hidden"><div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<div><div id="highlighter_165247" class="syntaxhighlighter nogutter  java"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container" title="Hint: double-click to select code"><div class="line number1 index0 alt2"><code class="java plain">Writer writes:YGUZE</code></div><div class="line number2 index1 alt1"><code class="java plain">Reader Thread-</code><code class="java value">1</code><code class="java plain">:YGUZE</code></div><div class="line number3 index2 alt2"><code class="java plain">Reader Thread-</code><code class="java value">2</code><code class="java plain">:YGUZE</code></div><div class="line number4 index3 alt1"><code class="java plain">Reader Thread-</code><code class="java value">3</code><code class="java plain">:YGUZE</code></div><div class="line number5 index4 alt2"><code class="java plain">Writer writes:JCQZN</code></div><div class="line number6 index5 alt1"><code class="java plain">Reader Thread-</code><code class="java value">3</code><code class="java plain">:JCQZN</code></div><div class="line number7 index6 alt2"><code class="java plain">Reader Thread-</code><code class="java value">2</code><code class="java plain">:JCQZN</code></div><div class="line number8 index7 alt1"><code class="java plain">Reader Thread-</code><code class="java value">1</code><code class="java plain">:JCQZN</code></div><div class="line number9 index8 alt2"><code class="java plain">Writer writes:NNUPQ</code></div><div class="line number10 index9 alt1"><code class="java plain">Reader Thread-</code><code class="java value">1</code><code class="java plain">:NNUPQ</code></div><div class="line number11 index10 alt2"><code class="java plain">Reader Thread-</code><code class="java value">2</code><code class="java plain">:NNUPQ</code></div><div class="line number12 index11 alt1"><code class="java plain">Reader Thread-</code><code class="java value">3</code><code class="java plain">:NNUPQ</code></div></div></td></tr></tbody></table></div></div>
+</div></div></div>
+</div>
+<h4 id="Practice5-Задание6"><span>Задание 6</span></h4></div><div><p>Создать десять потоков, которые&nbsp;<em><span style="color: rgb(0,0,0);"><u><strong>одновременно</strong></u>&nbsp;</span></em>пишут в один и тот же файл цифры:</p><p>первый поток пишет цифру 0 ровно 20 раз на 1й строке файла;<br>второй поток пишет цифру 1 ровно 20 раз на 2й строке файла;<br>...<br>девятый поток пишет цифру 9 ровно 20 раз на 10-й строке файла.</p><p>Для записи использовать класс&nbsp;<strong>RandomAccessFile</strong>&nbsp;(допускается
+ использование не более одного объекта этого класса).&nbsp;Перед началом
+ работы файл в который будет происходить запись должен быть удален, если
+ он существует.&nbsp;Главный поток, после запуска дочерных потоков на 
+выполнение, должен дождаться их завершения, после чего вывести в консоль
+ содержимое файла.</p><p>Замечание.&nbsp;Метод&nbsp;<strong>RandomAccessFile#seek(long)</strong>&nbsp;позволяет
+ передвигать указатель внутри файла. Каждый поток должен знать в каком 
+месте файла ему записывать информацию. Так как в условии фигурирует 
+термин "строка", следует вывод каждого потока (как выведет все 20 цифр) 
+завершать ограничителем строки (помните про необходимость 
+кросс-платформенности). Для того, чтобы записать некоторую цифру можно 
+использовать выражение&nbsp;<strong>'0'+ n</strong>, где n - цифра от 0 до 9 включительно. Передвижение указателя внутри файла и запись информации необходимо синхронизировать.</p><div id="expander-1953158074" class="expand-container">
+<div id="expander-control-1953158074" class="expand-control">
+    <span class="expand-control-icon expanded">&nbsp;</span><span class="expand-control-text">Пример вывода</span>
+</div>
+<div style="display: block;" id="expander-content-1953158074" class="expand-content"><p>00000000000000000000<br>11111111111111111111<br>22222222222222222222<br>33333333333333333333<br>44444444444444444444<br>55555555555555555555<br>66666666666666666666<br>77777777777777777777<br>88888888888888888888<br>99999999999999999999</p></div>
+</div>
+<h4 id="Practice5-Примеры"><span>Примеры</span></h4><div id="expander-1194437649" class="expand-container">
+<div id="expander-control-1194437649" class="expand-control">
+    <span class="expand-control-icon expanded">&nbsp;</span><span class="expand-control-text">Пример моделирования нажатия на Enter (для задания №2)</span>
+</div>
+<div style="display: block;" id="expander-content-1194437649" class="expand-content"><div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">
+<div><div id="highlighter_846747" class="syntaxhighlighter nogutter  java"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container" title="Hint: double-click to select code"><div class="line number1 index0 alt2"><code class="java keyword">import</code> <code class="java plain">java.io.ByteArrayInputStream;</code></div><div class="line number2 index1 alt1"><code class="java keyword">import</code> <code class="java plain">java.io.IOException;</code></div><div class="line number3 index2 alt2"><code class="java keyword">import</code> <code class="java plain">java.io.InputStream;</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="java keyword">class</code> <code class="java plain">Test </code><code class="java keyword">extends</code> <code class="java plain">Thread {</code></div><div class="line number6 index5 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number7 index6 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">run() {</code></div><div class="line number8 index7 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">while</code> <code class="java plain">(</code><code class="java keyword">true</code><code class="java plain">) {</code></div><div class="line number9 index8 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">try</code> <code class="java plain">{</code></div><div class="line number10 index9 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Demon works"</code><code class="java plain">);</code></div><div class="line number11 index10 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Thread.sleep(</code><code class="java value">300</code><code class="java plain">);</code></div><div class="line number12 index11 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">} </code><code class="java keyword">catch</code> <code class="java plain">(InterruptedException ex) {</code></div><div class="line number13 index12 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">ex.printStackTrace();</code></div><div class="line number14 index13 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number15 index14 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number16 index15 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number17 index16 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number18 index17 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String[] args) </code><code class="java keyword">throws</code> <code class="java plain">Exception {</code></div><div class="line number19 index18 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Test t = </code><code class="java keyword">new</code> <code class="java plain">Test();</code></div><div class="line number20 index19 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">t.setDaemon(</code><code class="java keyword">true</code><code class="java plain">);</code></div><div class="line number21 index20 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">t.start();</code></div><div class="line number22 index21 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number23 index22 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">new</code> <code class="java plain">Thread() {</code></div><div class="line number24 index23 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">void</code> <code class="java plain">run() {</code></div><div class="line number25 index24 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">byte</code><code class="java plain">[] buffer = </code><code class="java keyword">new</code> <code class="java keyword">byte</code><code class="java plain">[</code><code class="java value">10</code><code class="java plain">];</code></div><div class="line number26 index25 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">int</code> <code class="java plain">count;</code></div><div class="line number27 index26 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">try</code> <code class="java plain">{</code></div><div class="line number28 index27 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">do</code> <code class="java plain">{</code></div><div class="line number29 index28 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">while</code> <code class="java plain">((count = System.in.read(buffer)) == -</code><code class="java value">1</code><code class="java plain">);</code></div><div class="line number30 index29 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">} </code><code class="java keyword">while</code> <code class="java plain">(!System.lineSeparator().equals(</code><code class="java keyword">new</code> <code class="java plain">String(buffer, </code><code class="java value">0</code><code class="java plain">, count)));</code></div><div class="line number31 index30 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">} </code><code class="java keyword">catch</code> <code class="java plain">(IOException ex) {</code></div><div class="line number32 index31 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">ex.printStackTrace();</code></div><div class="line number33 index32 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number34 index33 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"ENTER has been obtained"</code><code class="java plain">);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></div><div class="line number35 index34 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number36 index35 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}.start();</code></div><div class="line number37 index36 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number38 index37 alt1"><code class="java plain">}</code></div><div class="line number39 index38 alt2">&nbsp;</div><div class="line number40 index39 alt1"><code class="java keyword">public</code> <code class="java keyword">class</code> <code class="java plain">Main {</code></div><div class="line number41 index40 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number42 index41 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java keyword">public</code> <code class="java keyword">static</code> <code class="java keyword">void</code> <code class="java plain">main(String[] args) </code><code class="java keyword">throws</code> <code class="java plain">Exception {</code></div><div class="line number43 index42 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// save standard input</code></div><div class="line number44 index43 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">InputStream stdIn = System.in;</code></div><div class="line number45 index44 alt2"><code class="java plain">&nbsp;</code></div><div class="line number46 index45 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// create input stream with line terminator (=ENTER)</code></div><div class="line number47 index46 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">ByteArrayInputStream bais = </code><code class="java keyword">new</code> <code class="java plain">ByteArrayInputStream(System.lineSeparator().getBytes());</code></div><div class="line number48 index47 alt1"><code class="java plain">&nbsp;</code></div><div class="line number49 index48 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// move internal pointer of input stream to the end of input</code></div><div class="line number50 index49 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">bais.skip(System.lineSeparator().length()); </code></div><div class="line number51 index50 alt2"><code class="java plain">&nbsp;</code></div><div class="line number52 index51 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// assign new value of standard input&nbsp;&nbsp; </code></div><div class="line number53 index52 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.setIn(bais);</code></div><div class="line number54 index53 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number55 index54 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// main functionality</code></div><div class="line number56 index55 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Test.main(args);</code></div><div class="line number57 index56 alt2">&nbsp;</div><div class="line number58 index57 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// waith for 3 sec</code></div><div class="line number59 index58 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">Thread.sleep(</code><code class="java value">3000</code><code class="java plain">);</code></div><div class="line number60 index59 alt1"><code class="java plain">&nbsp;</code></div><div class="line number61 index60 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.out.println(</code><code class="java string">"Try to send enter to standard input"</code><code class="java plain">);</code></div><div class="line number62 index61 alt1"><code class="java plain">&nbsp;</code></div><div class="line number63 index62 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// move internal pointer to begin of input</code></div><div class="line number64 index63 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">bais.reset();</code></div><div class="line number65 index64 alt2"><code class="java plain">&nbsp;</code></div><div class="line number66 index65 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java comments">// restore standard input</code></div><div class="line number67 index66 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">System.setIn(stdIn);</code></div><div class="line number68 index67 alt1"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="java plain">}</code></div><div class="line number69 index68 alt2"><code class="java spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number70 index69 alt1"><code class="java plain">}</code></div></div></td></tr></tbody></table></div></div>
+</div></div></div>
+</div>
+<div id="expander-588707988" class="expand-container">
+<div id="expander-control-588707988" class="expand-control">
+    <span class="expand-control-icon expanded">&nbsp;</span><span class="expand-control-text">Пример писателя и читателей (для задания №5)</span>
+</div>
+<div style="display: block;" id="expander-content-588707988" class="expand-content"><p>См. пример-заглушку, класс Part51.</p></div>
+</div>
+</div>
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5"
+    dc:identifier="http://jtrain.ddns.net:9001/conf2/display/JTL/Practice5"
+    dc:title="Practice5"
+    trackback:ping="http://jtrain.ddns.net:9001/conf2/rpc/trackback/72253606"/>
+</rdf:RDF>
+-->
+
+        <script type="text/x-template" title="labels-dialog-div">
+        <div id="labels-dialog">
+        <div class="labels-editor">
+            <form method="GET" action="" id="add-labels-form">
+                <div id="labelOperationErrorContainer">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+    
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent resize-to-input" style="width: 417px"></div>
+                <div id="dialog-label-list">
+                    <!-- DIV placeholder for labels list, is copied into in labels-dialog.js -->
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="/conf2/s/en_GB/3390/fe254e109a6fb9b541d2f5e2946c3766ed81e099.21/_/images/icons/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div class="labels-tip"></div>
+            </form>
+        </div>
+        <div style="display: none;">
+            <div class="labels-section-content content-column"
+    	    		entityid="72253606" entitytype="Page"
+    		>
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>        </div>
+    </div>
+</script>
+            
+    
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-editor">
+        <span id="labels-section-title" class="label-title">Labels</span>
+        <div class="labels-section-content content-column" entityid="72253606" entitytype="Page">
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels ( Type 'l' )">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>    </div>
+</div>
+
+            
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+                    
+    
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                
+            </div>
+    
+    </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+            
+    
+
+
+    <br class="clear">
+</div>
+  
+    </div>
+</div>
+
+
+        
+            
+    </div>
+
+
+<div style="display: none;" id="content-hover-0" class="ajs-content-hover"><div style="width: 300px;" class="contents"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div style="display: none;" id="content-hover-shadow"><div class="tl"></div><div class="tr"></div><div class="l"></div><div class="r"></div><div class="bl"></div><div class="br"></div><div class="b"></div></div><div style="position: relative; z-index: 0;" id="fileuploadShim"></div><div class="plupload html5" style="position: absolute; background: transparent none repeat scroll 0% 0%; width: 1423px; height: 0px; overflow: hidden; z-index: -1; opacity: 0; top: 756px; left: 0px;" id="p1akdod89e1g061rjubsi1ok12hn0_html5_container"><input id="p1akdod89e1g061rjubsi1ok12hn0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" accept="" multiple="multiple" type="file"></div></body></html>

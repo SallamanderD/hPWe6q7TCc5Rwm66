@@ -1,0 +1,5 @@
+<footer class="fixed-bottom">
+    <div class="container">
+        <span class="text-muted">&copy; Internet Banking (Aleksandr Dorotenko, EPAM-KNURE Java Training), 2017</span>
+    </div>
+</footer>
